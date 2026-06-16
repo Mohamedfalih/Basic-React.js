@@ -1,4 +1,4 @@
-/*import React from 'react'
+import React from 'react'
 import Greeting from './DashboardTask/Greeting'
 import Welcome from './DashboardTask/Welcome'
 import EmployeeProfile from './DashboardTask/EmployeeProfile'
@@ -21,7 +21,7 @@ function App() {
   )
 }
 
-export default App*/
+export default App
 
 import React from 'react'
 
@@ -46,6 +46,32 @@ function App() {
         </Routes>
       </Router>
     </div>
+  )
+}
+
+export default App
+
+
+import React from 'react'
+import Home from './component/Home'
+import Result from './component/Result'
+import {BrowserRouter as Router,Routes,Route,NavLink} from 'react-router-dom'
+
+function App() {
+  return (
+    <>
+    <Router>
+      <nav className="navbar">
+          <NavLink to="/">Home</NavLink>
+      </nav>
+
+      <Routes>
+          <Route path="/" element = {<Home/>}></Route>
+          <Route path="/result/:regno" element={<Result />}></Route>
+        </Routes>
+    </Router>
+        
+    </>
   )
 }
 
